@@ -1,5 +1,11 @@
 import './App.css';
 import Exam01 from './components/Exam01';
+import Exam02 from './components/Exam02';
+import Exam03 from './components/Exam03';
+import Exam03_2 from './components/Exam03_2';
+import Exam04 from './components/Exam04';
+import Exam04_2 from './components/Exam04_2';
+import Exam04_3 from './components/Exam04_3';
 
 function App() {
   return (
@@ -7,6 +13,17 @@ function App() {
       <h1>각종 리액트 예제</h1>
       <hr/>
       <Exam01/>
+      <hr/>
+      <Exam02/>
+      <hr/>
+      <Exam03/>
+      <br/><br/>
+      <Exam03_2/>
+      <hr/>
+      <Exam04/>
+      <br/><br/>
+      <Exam04_2/>
+      <Exam04_3/>
     </>
   );
 }
