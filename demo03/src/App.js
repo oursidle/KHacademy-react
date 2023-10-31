@@ -9,6 +9,9 @@ import Exam04_3 from './components/Exam04_3';
 import Exam05 from './components/Exam05';
 import Exam06 from './components/Exam06';
 import Exam07 from './components/Exam07';
+import Exam07_2 from './components/Exam07_2';
+import Exam07_3 from './components/Exam07_3';
+import Exam07_4 from './components/Exam07_4';
 
 function App() {
   return (
@@ -33,6 +36,12 @@ function App() {
       <Exam06/>
       <hr/>
       <Exam07/>
+      <br/><br/>
+      <Exam07_2/>
+      <br/><br/>
+      <Exam07_3/>
+      <br/><br/>
+      <Exam07_4/>
     </>
   );
 }

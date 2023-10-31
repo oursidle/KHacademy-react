@@ -24,7 +24,7 @@ const Exam07 = () => {
                     
                     <div className="row">
                         <div className="col text-center">
-                            <h1>회원가입</h1>
+                            <h1>회원가입_1</h1>
                         </div>
                     </div>
 
