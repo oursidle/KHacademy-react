@@ -6,6 +6,8 @@ import Exam03_2 from './components/Exam03_2';
 import Exam04 from './components/Exam04';
 import Exam04_2 from './components/Exam04_2';
 import Exam04_3 from './components/Exam04_3';
+import Exam05 from './components/Exam05';
+import Exam06 from './components/Exam06';
 
 function App() {
   return (
@@ -24,6 +26,10 @@ function App() {
       <br/><br/>
       <Exam04_2/>
       <Exam04_3/>
+      <hr/>
+      <Exam05/>
+      <hr/>
+      <Exam06/>
     </>
   );
 }
