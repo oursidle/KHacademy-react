@@ -10,7 +10,7 @@ const Exam05 = ()=>{
     const [avg, setAvg] = useState(0);
 
     useEffect(()=>{
-        setTotal(java, dbms, boot);
+        setTotal(java + dbms + boot);
     }, [java, dbms, boot]);
     useEffect(()=>{
         setAvg(total / 3);
@@ -51,8 +51,7 @@ const Exam05 = ()=>{
 
                     <div className="row mt-2">
                         <div className="col">
-                            <h5>총점 : {total}</h5>
-                            <h5>평균 : {avg}</h5>
+                            <h5>총점 : {total} , 평균 : {avg}</h5>
                         </div>
                     </div>
 

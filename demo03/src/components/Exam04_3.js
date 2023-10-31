@@ -32,7 +32,7 @@ const Exam04_3 = ()=>{
                     </div>
                 </div>
 
-                <div className="row">
+                <div className="row mt-2">
                     <div className="col">
                         <textarea name="content" className="form-control" 
                                 rows="6" value={content} onChange={e=>setContent(e.target.value)}></textarea>
