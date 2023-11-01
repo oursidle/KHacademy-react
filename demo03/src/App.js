@@ -13,6 +13,7 @@ import Exam07_2 from './components/Exam07_2';
 import Exam07_3 from './components/Exam07_3';
 import Exam07_4 from './components/Exam07_4';
 import Exam08 from './components/Exam08';
+import Exam09 from './components/Exam09';
 
 function App() {
   return (
@@ -45,6 +46,8 @@ function App() {
       <Exam07_4/>
       <hr/>
       <Exam08/>
+      <hr/>
+      <Exam09/>
     </>
   );
 }
