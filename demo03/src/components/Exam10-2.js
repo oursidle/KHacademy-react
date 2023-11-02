@@ -1,6 +1,6 @@
 import React from "react";
 
-const Exam10_2 = () => {
+const Exam10_2 = () => { 
     const foods = [
         { itemNo: 1, itemName: "포켓몬스터빵", itemPrice: 500, itemType: "식품" },
         { itemNo: 2, itemName: "허니버터칩", itemPrice: 1300, itemType: "식품" },
@@ -14,7 +14,7 @@ const Exam10_2 = () => {
         { itemNo: 10, itemName: "하리보젤리", itemPrice: 5500, itemType: "식품" },
     ];
 
-    return (
+    return (                                                                                                                                                                                                            
         <div>
             <h1>메뉴판</h1>
             <table style={{ borderCollapse: "collapse", width: "100%" }}>
