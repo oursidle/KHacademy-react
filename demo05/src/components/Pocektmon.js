@@ -50,6 +50,8 @@ const Pocketmon = (props) => {
     const closeModal = () => {
         const modal = Modal.getInstance(bsModal.current);
         modal.hide();
+
+        clearPocketmon();
     };
 
     //등록과 관련된 state
@@ -60,6 +62,24 @@ const Pocketmon = (props) => {
             [e.target.name] : e.target.value
         });
     };
+
+    const clearPocketmon = () => {
+        setPocketmon({name: "", type: ""});
+    };
+
+    //axios로 서버에 등록 요청을 보낸 후 등록 성공 시 목록을 갱신하도록 처리
+    const savePocketmon = ()=> {
+        axios ({
+            url: "http://localhost:8080/pocketmon/",
+            method: "post",
+            data: pocketmon
+        })
+        .then(response => {//성공했다면
+            loadPocketmon();//목록 갱신 후
+            closeModal();//모달 닫기
+        })
+        .catch(err => {})
+    }
 
     return (
         <>
@@ -138,7 +158,7 @@ const Pocketmon = (props) => {
                         </div>
                         <div className="modal-footer">
                                 <button className="btn btn-secondary" onClick={closeModal}>닫기</button>
-                                <button className="btn btn-success">저장</button>
+                                <button className="btn btn-success" onClick={savePocketmon}>저장</button>
                         </div>
                     </div>
                 </div>
