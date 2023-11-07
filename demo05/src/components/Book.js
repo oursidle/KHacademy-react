@@ -14,7 +14,7 @@ const Book = (props) => {
     //서버에서 book list를 불러와 state에 설정하는 코드
     // const loadBook = () => {
     //     axios({
-    //         url: "http://localhost:8080/book/",
+    //         url: `${process.env.REACT_APP_REST_API_URL}/book/`,
     //         method: "get"
     //     })
     //         .then(response => {
@@ -27,7 +27,7 @@ const Book = (props) => {
     }, []);
     const loadBook = async () => {
         const response = await axios({
-            url: "http://localhost:8080/book/",
+            url: `${process.env.REACT_APP_REST_API_URL}/book/`,
             method: "get"
         })
         setBookList(response.data);
@@ -40,7 +40,7 @@ const Book = (props) => {
         if (choice === false) return;
 
         axios({
-            url: `http://localhost:8080/book/${book.bookId}`,
+            url: `${process.env.REACT_APP_REST_API_URL}/book/${book.bookId}`,
             method: "delete"
         })
             .then(response => {
@@ -95,7 +95,7 @@ const Book = (props) => {
     //도서 등록 후 목록 갱신
     // const saveBook = () => {
     //     axios({
-    //         url: "http://localhost:8080/book/",
+    //         url: `${process.env.REACT_APP_REST_API_URL}/book/`,
     //         method: "post",
     //         data: book
     //     })
@@ -110,15 +110,13 @@ const Book = (props) => {
     //- 비동기 작업을 동기화된 코드로 작성할 수 잇음
     const saveBook = async () => {
         const response = await axios({
-            url: "http://localhost:8080/book/",
+            url: `${process.env.REACT_APP_REST_API_URL}/book/`,
             method: "post",
             data: book
         });
         loadBook();
         closeModal();
     };
-
-
 
     //도서 수정 모달
     const editBook = (target) => {
@@ -135,7 +133,7 @@ const Book = (props) => {
         //     bookId, bookTitle, bookAuthor, bookPublicationDate, bookPublisher,
         //     bookPrice, bookPageCount, bookGenre } = book;
         axios({
-            url: `http://localhost:8080/book/${book.bookId}`,
+            url: `${process.env.REACT_APP_REST_API_URL}/book/${book.bookId}`,
             method: "put",
             // data: {
             //     bookTitle: bookTitle,
